@@ -69,7 +69,6 @@ for out in outs:
             class_ids.append(class_id)
 
 indexes = cv2.dnn.NMSBoxes(boxes, confidences, args.confidence_threshold, args.nms_threshold)
-print(indexes)
 font = cv2.FONT_HERSHEY_PLAIN
 for i in range(len(boxes)):
     if i in indexes:
@@ -78,6 +77,7 @@ for i in range(len(boxes)):
         color = colors[class_ids[i]]
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
         cv2.putText(img, label, (x, y + 30), font, 3, color, 3)
+        print(label)
 
 
 cv2.imshow("Image", img)

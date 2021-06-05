@@ -19,10 +19,7 @@ or
 ```
 python -m pip install -r requirements.txt
 ```
-3. Download YOLOv3 weight
-```
-curl https://pjreddie.com/media/files/yolov3.weights
-```
+3. Download YOLOv3 weight in [here](https://pjreddie.com/media/files/yolov3.weights)
 
 ## Run
 1. Use image

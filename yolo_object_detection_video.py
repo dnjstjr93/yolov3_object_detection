@@ -28,7 +28,6 @@ args = parser.parse_args()
 modelConfiguration = args.config_file
 modelWeights = args.weight_file
 
-# net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
 net = cv2.dnn.readNet(modelWeights, modelConfiguration)
 
 classes = []

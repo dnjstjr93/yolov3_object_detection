@@ -4,6 +4,7 @@ __date__    = '2021/06/06'
 import cv2
 import numpy as np
 import time
+import os
 import argparse
 
 parser = argparse.ArgumentParser(description="YOLO Object Detection")
@@ -48,7 +49,10 @@ video_path = args.video
 cap = cv2.VideoCapture(video_path)
 
 # define output
-out = video_path.split('/')[1].split('.')[0]
+out = video_path.split('\\')[1].split('.')[0]
+path = "./output"
+if not os.path.isdir(path):
+    os.mkdir(path)
 outputFile = 'output/' + out + '_yolov3_output.mp4'
 FPS = args.fps
 fourcc = cv2.VideoWriter_fourcc(*'MP4V')

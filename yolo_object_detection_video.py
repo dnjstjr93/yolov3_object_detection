@@ -49,11 +49,11 @@ video_path = args.video
 cap = cv2.VideoCapture(video_path)
 
 # define output
-out = video_path.split('\\')[1].split('.')[0]
-path = "./output"
+out = video_path.split('\\')[-1].split('.')[0]
+path = ".\\output"
 if not os.path.isdir(path):
     os.mkdir(path)
-outputFile = 'output/' + out + '_yolov3_output.mp4'
+outputFile = 'output\\' + out + '_yolov3_output.mp4'
 FPS = args.fps
 fourcc = cv2.VideoWriter_fourcc(*'MP4V')
 video = cv2.VideoWriter(outputFile, fourcc, FPS, (round(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))

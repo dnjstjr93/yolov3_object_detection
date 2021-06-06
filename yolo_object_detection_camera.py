@@ -9,7 +9,7 @@ import argparse
 from datetime import datetime
 
 parser = argparse.ArgumentParser(description="YOLO Object Detection")
-parser.add_argument("--camera", type=int, default=0, help="camera source.")
+parser.add_argument("--camera", type=str, default=int(0), help="camera source.")  # rtsp://admin:1234556@10.252.29.21/stream0
 parser.add_argument("--cameraSize", default=416, type=int,
                     help="camera size")
 parser.add_argument("--confidence_threshold", type=float, default=0.5,

@@ -24,5 +24,13 @@ python -m pip install -r requirements.txt
 ## Run
 1. Use image
 ```
-python yolo_object_detection.py 
+python yolo_object_detection.py --image image_file
+```
+2. Use video
+```
+python yolo_object_detection_video.py --video video_file
+```
+3. Use camera
+```
+python yolo_object_detection_video.py --video 0
 ```
